@@ -1,11 +1,37 @@
-void main(){
+import 'dart:ffi';
+
+void main() {
   List<Map<String, dynamic>> daftarMahasiswa = [
-    {"nama": "Aubrey", "IPK" : 3.23}
+    {
+      "nama": "John Doe",
+      "ipk": 3.88,
+      "isMarried": false,
+    },
+    {
+      "nama": "Andi Doe",
+      "ipk": 3.78,
+      "isMarried": true,
+    },
+    {
+      "nama": "Budi Doe",
+      "ipk": 3.68,
+      "isMarried": true,
+    }
   ];
+
+  double TotIpk = 0;
+  int IsMa = 0;
+
+  for (int i = 0; i < daftarMahasiswa.length; i++) {
+    TotIpk += daftarMahasiswa[i]['ipk'];
+
+    if (daftarMahasiswa[i]['isMarried'] == true) {
+      IsMa += 1;
+    }
+  }
+
+  double RataIpk = TotIpk / daftarMahasiswa.length;
+  print(RataIpk);
+
+  print(IsMa);
 }
-
-
-// 1.buatkan algoritma
-// a.menghitung rerata dari ipk
-// b.menjumlahkan brp banyak mahsiswa yg sudah menikah
-// 2.masing-masing dari poin 1.a dan 1.b diimplementasikan dalam kode program
