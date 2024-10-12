@@ -8,7 +8,9 @@ penjelasan
 Disini saya menggunakan beberapa widget
 
 ListView : untuk membuat List yg bisa di scroll, dan disini saya menggunakan scrollDirection : axis.horizontal untuk scroll kanan kiri
+
 padding : untuk mengatur jarak yg ada di dalam
+
 card : buat pembungkus si content
 
  
