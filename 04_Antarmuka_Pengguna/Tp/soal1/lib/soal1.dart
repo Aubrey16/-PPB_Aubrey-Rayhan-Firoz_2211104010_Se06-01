@@ -44,8 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 100),
-            Row(
+            const SizedBox(height: 100),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text('Hoyo Fest 2024',
@@ -55,16 +55,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     )),
               ],
             ),
-            SizedBox(height: 20),
-            Container(
+            const SizedBox(height: 20),
+            SizedBox(
               height: 200,
               width: 600,
               child: Image.network(
                   'https://cdn.antaranews.com/cache/1200x800/2024/08/08/1000002191.jpg'),
             ),
-            SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: Row(
                 children: [
                   Expanded(
@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Center(
               child: ElevatedButton(
                 onPressed: () {},
@@ -86,9 +86,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 ),
-                child: Text(
+                child: const Text(
                   'Lihat Selengkapnya',
                   style: TextStyle(fontSize: 16),
                 ),
