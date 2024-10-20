@@ -8,14 +8,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Biodata"),
+        title: const Text("Biodata"),
         centerTitle: true,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 40),
-          Container(
+          const SizedBox(height: 40),
+          SizedBox(
             height: 200,
             width: 600,
             child: Image.network(
@@ -23,20 +23,20 @@ class HomePage extends StatelessWidget {
               fit: BoxFit.contain,
             ),
           ),
-          SizedBox(height: 40),
-          Row(
+          const SizedBox(height: 40),
+          const Row(
             children: [
               Text('Nama : ', style: TextStyle(fontSize: 20)),
               Text('Aubrey Rayhan Firoz', style: TextStyle(fontSize: 20))
             ],
           ),
-          Row(
+          const Row(
             children: [
               Text("Nim    : ", style: TextStyle(fontSize: 20)),
               Text("2211104100", style: TextStyle(fontSize: 20))
             ],
           ),
-          Row(
+          const Row(
             children: [
               Text("Kelas  : ", style: TextStyle(fontSize: 20)),
               Text("Se06-01" , style: TextStyle(fontSize: 20))

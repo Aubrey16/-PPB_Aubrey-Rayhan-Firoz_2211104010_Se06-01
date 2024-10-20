@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 void main(){
   String namaMahasiswa; // DEKLARASI

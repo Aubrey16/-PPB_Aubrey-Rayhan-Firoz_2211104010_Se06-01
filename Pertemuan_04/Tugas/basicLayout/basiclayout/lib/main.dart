@@ -24,7 +24,7 @@ class MainApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   final String title;
 
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +32,13 @@ class MyHomePage extends StatelessWidget {
       body: Stack(
         children: [
 
-          Positioned(
+          const Positioned(
             left: 10,
             top: 60,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'Welcome',
                   style: TextStyle(
                     fontSize: 34,
@@ -46,8 +46,8 @@ class MyHomePage extends StatelessWidget {
                     color: Colors.blue,
                   ),
                 ),
-                const SizedBox(height: 10),
-                const Text(
+                SizedBox(height: 10),
+                Text(
                   'Aubrey - 2211104010',
                   style: TextStyle(
                     fontSize: 18,
@@ -63,7 +63,7 @@ class MyHomePage extends StatelessWidget {
             child: Container(
               width: 100,
               height: 200,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.green,
                 shape: BoxShape.circle,
               ),

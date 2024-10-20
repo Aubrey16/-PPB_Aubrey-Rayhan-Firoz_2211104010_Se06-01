@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 void main() {
   List<Map<String, dynamic>> daftarMahasiswa = [
