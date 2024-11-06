@@ -60,7 +60,7 @@ class _BottomNavigationBarExampleState extends State<BottomNavigationBarExample>
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Latihan BottomNavigationBar'),
+        title: const Text('Latihan BottomNavigationBar'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),

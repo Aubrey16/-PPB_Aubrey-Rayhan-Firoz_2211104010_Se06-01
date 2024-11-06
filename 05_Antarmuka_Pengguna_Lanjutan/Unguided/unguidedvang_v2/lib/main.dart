@@ -42,8 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
             centerTitle: true,
             title: Text(widget.title),
           ),
-          SliverToBoxAdapter(
-            child: const SizedBox(height: 20),
+          const SliverToBoxAdapter(
+            child: SizedBox(height: 20),
           ),
           SliverToBoxAdapter(
             child: SingleChildScrollView(

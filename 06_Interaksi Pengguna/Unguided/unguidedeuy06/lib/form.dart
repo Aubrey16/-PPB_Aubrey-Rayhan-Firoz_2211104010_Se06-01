@@ -15,7 +15,7 @@ class _FormPageState extends State<FormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Form Page'),
+        title: const Text('Form Page'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -25,7 +25,7 @@ class _FormPageState extends State<FormPage> {
             children: [
               TextFormField(
                 controller: _textController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Enter something',
                 ),
                 validator: (value) {
