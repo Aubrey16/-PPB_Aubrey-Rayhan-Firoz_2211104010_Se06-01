@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
+Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home Screen'),
@@ -82,29 +82,53 @@ class _HomeScreenState extends State<HomeScreen> {
                           },
                         ),
                       ),
-            ElevatedButton(
-              onPressed: () => _handleApiOperation(
-                  _apiService.fetchPosts(), 'Data berhasil diambil!'),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
-              child: const Text('GET'),
-            ),
-            ElevatedButton(
-              onPressed: () => _handleApiOperation(
-                  _apiService.createPost(), 'Data berhasil ditambahkan!'),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-              child: const Text('POST'),
-            ),
-            ElevatedButton(
-              onPressed: () => _handleApiOperation(
-                  _apiService.updatePost(), 'Data berhasil diperbarui!'),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
-              child: const Text('UPDATE'),
-            ),
-            ElevatedButton(
-              onPressed: () => _handleApiOperation(
-                  _apiService.deletePost(), 'Data berhasil dihapus!'),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-              child: const Text('DELETE'),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: Center(
+                child: Column(
+                  children: [
+                    ElevatedButton(
+                      onPressed: () => _handleApiOperation(
+                          _apiService.fetchPosts(), 'Data berhasil diambil!'),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 24.0, vertical: 12.0)),
+                      child: const Text('GET'),
+                    ),
+                    const SizedBox(height: 8.0),
+                    ElevatedButton(
+                      onPressed: () => _handleApiOperation(
+                          _apiService.createPost(), 'Data berhasil ditambahkan!'),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 24.0, vertical: 12.0)),
+                      child: const Text('POST'),
+                    ),
+                    const SizedBox(height: 8.0),
+                    ElevatedButton(
+                      onPressed: () => _handleApiOperation(
+                          _apiService.updatePost(), 'Data berhasil diperbarui!'),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 24.0, vertical: 12.0)),
+                      child: const Text('UPDATE'),
+                    ),
+                    const SizedBox(height: 8.0),
+                    ElevatedButton(
+                      onPressed: () => _handleApiOperation(
+                          _apiService.deletePost(), 'Data berhasil dihapus!'),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 24.0, vertical: 12.0)),
+                      child: const Text('DELETE'),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
@@ -112,3 +136,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
