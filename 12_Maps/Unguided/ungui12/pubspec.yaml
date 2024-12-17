@@ -40,8 +40,6 @@ dependencies:
   place_picker: ^0.10.0
   place_picker_google: ^0.0.10
 
-  
-
 dev_dependencies:
   flutter_test:
     sdk: flutter

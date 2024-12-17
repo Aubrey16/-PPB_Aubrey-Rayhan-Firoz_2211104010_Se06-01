@@ -13,7 +13,7 @@ class MapsScreen extends StatefulWidget {
 class _MapsScreenState extends State<MapsScreen> {
   static final LatLng _kMapCenter = LatLng(-17.535000, -149.569595);
   static final CameraPosition _kInitialPosition = CameraPosition(
-    target: _kMapCenter
+    target: _kMapCenter,
     zoom: 11.0,
   );
 
