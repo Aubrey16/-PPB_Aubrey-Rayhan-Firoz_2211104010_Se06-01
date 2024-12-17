@@ -94,6 +94,18 @@ class _HomeScreenState extends State<HomeScreen> {
               style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
               child: const Text('POST'),
             ),
+            ElevatedButton(
+              onPressed: () => _handleApiOperation(
+                  _apiService.updatePost(), 'Data berhasil diperbarui!'),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+              child: const Text('UPDATE'),
+            ),
+            ElevatedButton(
+              onPressed: () => _handleApiOperation(
+                  _apiService.deletePost(), 'Data berhasil dihapus!'),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+              child: const Text('DELETE'),
+            ),
           ],
         ),
       ),
