@@ -45,53 +45,58 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text('Home Screen'),
       ),
-       body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _isLoading
-                  ? const Center(child: CircularProgressIndicator())
-                  : _posts.isEmpty
-                      ? const Text(
-                          "Tekan tombol GET untuk mengambil data",
-                          style: TextStyle(fontSize: 12),
-                        )
-                      : Expanded(
-                          child: ListView.builder(
-                            itemCount: _posts.length,
-                            itemBuilder: (context, index) {
-                              return Padding(
-                                padding: const EdgeInsets.only(bottom: 12.0),
-                                child: Card(
-                                  elevation: 4,
-                                  child: ListTile(
-                                    title: Text(
-                                      _posts[index]['title'],
-                                      style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 12),
-                                    ),
-                                    subtitle: Text(
-                                      _posts[index]['body'],
-                                      style: const TextStyle(fontSize: 12),
-                                    ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _isLoading
+                ? const Center(child: CircularProgressIndicator())
+                : _posts.isEmpty
+                    ? const Text(
+                        "Tekan tombol GET untuk mengambil data",
+                        style: TextStyle(fontSize: 12),
+                      )
+                    : Expanded(
+                        child: ListView.builder(
+                          itemCount: _posts.length,
+                          itemBuilder: (context, index) {
+                            return Padding(
+                              padding: const EdgeInsets.only(bottom: 12.0),
+                              child: Card(
+                                elevation: 4,
+                                child: ListTile(
+                                  title: Text(
+                                    _posts[index]['title'],
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 12),
+                                  ),
+                                  subtitle: Text(
+                                    _posts[index]['body'],
+                                    style: const TextStyle(fontSize: 12),
                                   ),
                                 ),
-                              );
-                            },
-                          ),
+                              ),
+                            );
+                          },
                         ),
-              ElevatedButton(
-                onPressed: () => _handleApiOperation(
-                    _apiService.fetchPosts(), 'Data berhasil diambil!'),
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
-                child: const Text('GET'),
-              ),
-      
-            ],
-          ),
+                      ),
+            ElevatedButton(
+              onPressed: () => _handleApiOperation(
+                  _apiService.fetchPosts(), 'Data berhasil diambil!'),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
+              child: const Text('GET'),
+            ),
+            ElevatedButton(
+              onPressed: () => _handleApiOperation(
+                  _apiService.createPost(), 'Data berhasil ditambahkan!'),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+              child: const Text('POST'),
+            ),
+          ],
         ),
+      ),
     );
   }
 }
